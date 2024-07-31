@@ -101,8 +101,84 @@ input:focus{
 }
 
 @media (max-width: 768px) {
-    /* Styles for devices with a width of 768px or less */
-  }
-  @media (max-width: 480px) {
-    /* Styles for devices with a width of 480px or less */
-  }
+    .currency-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .currency-container select,
+    .currency-container input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .currency-container input {
+        font-size: 20px;
+    }
+
+    .exchange-rate {
+        font-size: 14px;
+    }
+}
+
+.container {
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.currency-container {
+    padding: 1rem;
+}
+
+.currency-container select,
+.currency-container input {
+    width: calc(50% - 1rem); /* Adjust width based on container padding */
+}
+
+.currency-container input {
+    font-size: 1.5rem;
+}
+
+.currency-container {
+    display: flex;
+    flex-direction: row; /* Default */
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .currency-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .currency-container {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.exchange-rate {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .exchange-rate {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .exchange-rate {
+        font-size: 0.75rem;
+    }
+}
