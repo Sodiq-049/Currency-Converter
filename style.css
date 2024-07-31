@@ -1,0 +1,101 @@
+body{
+    background: linear-gradient(to right, green, white, green);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+.container{
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background: linear-gradient(to right,green 33%, white 33%, white 66%, green 66%);
+    background-size: 300% 100%; /* Adjust size to ensure smooth movement */
+    animation: waveAnimation 5s linear infinite;
+}
+
+
+
+@keyframes waveAnimation {
+    0% {
+        background-position: 0% 0%;
+        color: white;
+    }
+    20% {
+        background-position: 20% 0%;
+        color: white;
+    }
+    40% {
+        background-position: 40% 0%;
+        color: green;
+    }
+    60% {
+        background-position: 60% 0%;
+        color: green;
+    }
+    80% {
+        background-position: 80% 0%;
+        color: white;
+    }
+    100% {
+        background-position: 100% 0%;
+        color: white;
+    }
+}
+
+
+.exchange-rate{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.currency-container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.currency-container select{
+    padding: 10px;
+    background-color: green;
+    color: aliceblue;
+}
+
+.currency-container input{
+    border: 0;
+    background: transparent;
+    font-size: 25px;
+    text-align: right;
+    color: green;
+    animation: textColorAnimation 5s linear infinite;
+}
+
+@keyframes textColorAnimation {
+    0% {
+        color: white;
+    }
+    20% {
+        color: white;
+    }
+    40% {
+        color: green;
+    }
+    60% {
+        color: green;
+    }
+    80% {
+        color: white;
+    }
+    100% {
+        color: white;
+    }
+}
+
+select:focus,
+input:focus{
+    outline: 0;
+}
